@@ -1,2 +1,2 @@
-# Another-Dimension
+AnotherDimension
 Private domain and creative space
