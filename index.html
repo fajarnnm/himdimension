@@ -3,44 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN - HIM DIMENSION</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Foodie App Login</title>
+    <link rel="stylesheet" href="loginsss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="box">
-        <h3>ACCESS GRANTED HIM</h3>
-
-        <input type="text" placeholder="Username" id="username">
-
-        <div class="password-wrapper">
-            <input type="password" id="password" placeholder="Password">
-            <span class="eye" onclick="togglePassword()">️ᝰ.ᐟ</span>
+    <div class="container">
+        <div class="card">
+            <div class="header-image">
+                <img src="background.jpeg" alt="Character">
+            </div>
+            <div class="form-container">
+                <h2>ACCESS GRANTED HIM</h2>
+                <p class="subtitle">Your presence is required</p>
+                
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="userInput" placeholder="Username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="passInput" placeholder="********" required>
+                    <span class="forgot-password">Forgot Password?</span>
+                </div>
+                
+                <button class="btn-primary" id="loginBtn">Sign in</button>
+                
+                <div class="social-login">
+                    <p>Or continue with</p>
+                    <div class="icons">
+                        <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google">
+                        <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="FB">
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <button type="button" onclick="login()">MASUK</button>
-        <p class="tagline">Your presence is required</p>
     </div>
 
     <script>
-        function login() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            const user = document.getElementById('userInput').value;
+            const pass = document.getElementById('passInput').value;
 
-            if(username === "himxxcry" && password === "123Siap") {
-                window.location.href = "home.html";
+            // Logika simpel: kalau user & pass diisi (apa aja), langsung pindah
+            // Kalau mau spesifik, ganti jadi: if(user === "admin" && pass === "123")
+            if (user !== "" && pass !== "") {
+                // GANTI "halaman_dua.html" sama nama file HTML lo yang satu lagi
+                window.location.href = "home.html"; 
             } else {
-                alert("Username atau Password salah!");
+                alert("Isi dulu dong username sama passwordnya, der!");
             }
-        }
-
-        function togglePassword() {
-            var pass = document.getElementById("password");
-            if(pass.type === "password") {
-                pass.type = "text";
-            } else {
-                pass.type = "password";
-            }
-        }
+        });
     </script>
 </body>
-</html>
+                            </html>
+                            
