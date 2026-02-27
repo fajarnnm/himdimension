@@ -6,8 +6,8 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #e0e7ff; /* Soft blue background */
-    color: #1a1a1a; /* Tetap hitam/gelap sesuai request */
+    background-color: #f0f4f8;
+    color: #1a1a1a;
 }
 
 .screen {
@@ -20,44 +20,41 @@ body {
     flex-direction: column;
 }
 
-/* --- SECTION 1: HERO --- */
+/* GRADIENT BIRU CAMPUR SESUAI GAMBAR */
+.btn-cta, .btn-watch, .rating, .popular-header {
+    background: linear-gradient(135deg, #4da3ff 0%, #00ffff 100%) !important;
+}
+
+/* SECTION 1 */
 .hero-image-top {
     width: 100%;
     height: 45vh;
-    background-image: url('background.jpeg');
+    background-image: url('background.jpeg'); /* Pastiin filenya ada di GitHub */
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 
-.hero-content {
-    padding: 30px;
-    flex: 1;
-}
-
-.logo { color: #2563eb; font-weight: 800; font-size: 22px; margin-bottom: 15px; } /* Biru */
-.title { font-size: 24px; font-weight: 800; line-height: 1.2; color: #1a1a1a; } /* Tetap hitam */
-.title span { color: #2563eb; } /* Biru */
+.hero-content { padding: 30px; flex: 1; }
+.logo { color: #0088ff; font-weight: 800; font-size: 22px; margin-bottom: 15px; }
+.title { font-size: 24px; font-weight: 800; line-height: 1.2; }
+.title span { color: #0088ff; }
 
 .btn-cta {
     margin-top: 20px;
-    background: #3b82f6; /* Biru terang */
     color: white;
     border: none;
     padding: 12px 30px;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-/* --- SECTION 2: POPULAR --- */
-.section-2 { background: #f0f7ff; }
-
+/* SECTION 2 */
 .popular-header {
-    background: #1d4ed8; /* Biru tua */
     padding: 40px 30px;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
-
 .side-title { color: #fff; font-size: 32px; font-weight: 800; line-height: 0.9; }
 
 .cards-scroll {
@@ -66,11 +63,7 @@ body {
     padding: 20px 30px;
     overflow-x: auto;
     margin-top: -30px;
-    scrollbar-width: none;
 }
-
-.cards-scroll::-webkit-scrollbar { display: none; }
-
 .card {
     min-width: 220px;
     height: 320px;
@@ -84,38 +77,27 @@ body {
     color: white;
 }
 
-/* --- SECTION 3: DETAIL --- */
+/* SECTION 3 */
 .section-3 {
     background-image: url('background.jpeg');
     background-size: cover;
-    background-position: center;
     justify-content: center;
+    display: flex;
+    align-items: center;
     padding: 30px;
 }
-
 .glass-box {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     border-radius: 30px;
     padding: 30px;
-    border: 1px solid rgba(255,255,255,0.3);
+    width: 100%;
 }
+.detail-title { color: #0066cc; font-weight: 800; }
+.btn-watch { color: white; border: none; padding: 10px 25px; border-radius: 20px; font-weight: 700; }
+.rating { width: 45px; height: 45px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
 
-.detail-title { font-size: 22px; color: #1d4ed8; font-weight: 800; } /* Biru */
-.detail-title span { font-size: 14px; color: #444; font-weight: 400; }
-.detail-desc { font-size: 13px; margin: 15px 0; line-height: 1.5; color: #1a1a1a; } /* Tetap hitam */
-
-.action-group { display: flex; align-items: center; justify-content: space-between; }
-.btn-watch { background: #3b82f6; color: white; border: none; padding: 10px 25px; border-radius: 20px; font-weight: 700; } /* Biru */
-.rating { width: 45px; height: 45px; border-radius: 50%; background: #1d4ed8; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; } /* Biru */
-
-/* Indikator Titik */
-.dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding-bottom: 20px;
-}
+.dots { display: flex; justify-content: center; gap: 8px; padding-bottom: 20px; }
 .dots span { width: 6px; height: 6px; background: #cbd5e1; border-radius: 50%; }
-.dots span.active { background: #3b82f6; width: 15px; border-radius: 10px; } /* Biru */
+.dots span.active { background: #00ffff; width: 15px; border-radius: 10px; }
+    
