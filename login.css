@@ -5,12 +5,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Kunci utama Full Screen */
+/* Pastiin dari akar sampe ujung tinggi semua */
 html, body {
     width: 100%;
+    height: 100%;
     height: 100dvh;
-    overflow: hidden; /* No Scroll */
-    background-color: #FFD966; /* Samain sama warna card biar gak ada gap putih */
+    overflow: hidden;
+    background-color: #FFD966; /* Kuning biar gak ada celah putih */
 }
 
 body {
@@ -19,28 +20,19 @@ body {
     align-items: center;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .card {
-    width: 100%;
-    height: 100%; /* Maksa Full Screen */
-    max-width: 500px; /* Biar gak terlalu lebar di tablet/laptop */
-    background-color: #FFD966;
+    width: 100vw; /* Full lebar viewport */
+    height: 100dvh; /* Full tinggi viewport */
+    max-width: 450px; /* Biar gak aneh di desktop, tapi di HP bakal full */
     display: flex;
     flex-direction: column;
+    background-color: #FFD966;
     position: relative;
-    overflow: hidden;
 }
 
 .header-image {
     width: 100%;
-    flex: 1; /* Porsi gambar */
+    height: 40vh; /* Gue patok 40% dari tinggi layar */
     overflow: hidden;
 }
 
@@ -48,99 +40,101 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Fade effect */
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .form-container {
-    flex: 1.8; /* Kasih porsi lebih banyak buat form biar gak sesek */
+    width: 100%;
+    height: 65vh; /* Gue tumpang tindihin biar full ke bawah */
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 40px 30px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    margin-top: -60px; /* Numpuk di atas gambar */
-    text-align: center;
+    margin-top: -5vh; /* Narik ke atas dikit */
+    padding: 30px 25px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Biar konten di dalem form gak berantakan */
+.form-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Biar konten atas & bawah misah pas */
+    justify-content: space-around; /* Ini yang bikin pas se-layar */
+    text-align: center;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
     color: #1a1a1a;
-    margin-bottom: 8px;
 }
 
 .subtitle {
-    font-size: 13px;
+    font-size: 12px;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .input-group {
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .input-group label {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     color: #999;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     display: block;
-    padding-left: 5px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 16px;
+    padding: 12px 15px;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     background: #fff;
-    font-size: 15px;
-    outline: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    font-size: 14px;
 }
 
 .forgot-password {
     display: block;
     text-align: right;
-    font-size: 11px;
+    font-size: 10px;
     color: #999;
-    margin-top: 5px;
-    text-decoration: none;
+    margin-top: 4px;
 }
 
 .btn-primary {
     width: 100%;
-    padding: 16px;
+    padding: 15px;
     border: none;
-    border-radius: 15px;
+    border-radius: 12px;
     background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
     color: white;
     font-weight: 700;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+    font-size: 15px;
+    box-shadow: 0 8px 15px rgba(79, 172, 254, 0.3);
 }
 
 .social-login p {
-    font-size: 11px;
+    font-size: 10px;
     color: #999;
-    margin: 20px 0 10px;
 }
 
 .icons {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 10px;
 }
 
 .icons img {
-    width: 30px;
-    height: 30px;
-}
+    width: 28px;
+    height: 28px;
+    }
+    
