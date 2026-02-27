@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Foodie App Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="loginsss.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="header-image">
-                <img src="background.jpeg" alt="Character">
-            </div>
-            <div class="form-container">
+    <div class="card">
+        <div class="header-image">
+            <img src="background.jpeg" alt="Character">
+        </div>
+        <div class="form-container">
+            <div class="form-content">
                 <h2>ACCESS GRANTED HIM</h2>
                 <p class="subtitle">Your presence is required</p>
                 
                 <div class="input-group">
                     <label>Username</label>
-                    <input type="text" id="userInput" placeholder="Username" required>
+                    <input type="text" id="userInput" placeholder="Username">
                 </div>
                 
                 <div class="input-group">
                     <label>Password</label>
-                    <input type="password" id="passInput" placeholder="********" required>
+                    <input type="password" id="passInput" placeholder="********">
                     <span class="forgot-password">Forgot Password?</span>
                 </div>
                 
@@ -42,19 +42,17 @@
     </div>
 
     <script>
-        // Logika pindah halaman
         document.getElementById('loginBtn').addEventListener('click', function(e) {
             e.preventDefault();
             const user = document.getElementById('userInput').value;
             const pass = document.getElementById('passInput').value;
-
             if (user !== "" && pass !== "") {
-                // Ganti sesuai nama file tujuan lo di GitHub
-                window.location.href = "halaman_dua.html"; 
+                window.location.href = "home.html"; 
             } else {
                 alert("Isi dulu username & passwordnya, der!");
             }
         });
     </script>
 </body>
-</html>
+                    </html>
+                    
