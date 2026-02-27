@@ -20,16 +20,32 @@ body {
     flex-direction: column;
 }
 
-/* GRADIENT BIRU CAMPUR SESUAI GAMBAR */
+/* --- LOGIC BACKGROUND DALAM TULISAN --- */
+.title span {
+    /* Panggil file gambar lo */
+    background-image: url("background.jpeg"); 
+    background-size: cover;
+    background-position: center;
+    
+    /* Magic Clipping biar gambar masuk ke teks */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    
+    display: inline-block;
+    font-weight: 800;
+}
+
+/* --- GRADASI BIRU CAMPUR (Sesuai Gambar Lo) --- */
 .btn-cta, .btn-watch, .rating, .popular-header {
     background: linear-gradient(135deg, #4da3ff 0%, #00ffff 100%) !important;
 }
 
-/* SECTION 1 */
+/* --- SECTION 1 --- */
 .hero-image-top {
     width: 100%;
     height: 45vh;
-    background-image: url('background.jpeg'); /* Pastiin filenya ada di GitHub */
+    background-image: url("background.jpeg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
@@ -37,8 +53,7 @@ body {
 
 .hero-content { padding: 30px; flex: 1; }
 .logo { color: #0088ff; font-weight: 800; font-size: 22px; margin-bottom: 15px; }
-.title { font-size: 24px; font-weight: 800; line-height: 1.2; }
-.title span { color: #0088ff; }
+.title { font-size: 24px; font-weight: 800; line-height: 1.2; color: #1a1a1a; }
 
 .btn-cta {
     margin-top: 20px;
@@ -48,9 +63,10 @@ body {
     border-radius: 12px;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
 }
 
-/* SECTION 2 */
+/* --- SECTION 2 --- */
 .popular-header {
     padding: 40px 30px;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
@@ -63,12 +79,15 @@ body {
     padding: 20px 30px;
     overflow-x: auto;
     margin-top: -30px;
+    scrollbar-width: none;
 }
+.cards-scroll::-webkit-scrollbar { display: none; }
+
 .card {
     min-width: 220px;
     height: 320px;
     border-radius: 25px;
-    background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url('background.jpeg');
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8), transparent), url("background.jpeg");
     background-size: cover;
     border: 4px solid white;
     display: flex;
@@ -77,23 +96,31 @@ body {
     color: white;
 }
 
-/* SECTION 3 */
+/* --- SECTION 3 --- */
 .section-3 {
-    background-image: url('background.jpeg');
+    background-image: url("background.jpeg");
     background-size: cover;
+    background-position: center;
     justify-content: center;
     display: flex;
     align-items: center;
     padding: 30px;
 }
+
 .glass-box {
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 30px;
     padding: 30px;
     width: 100%;
+    border: 1px solid rgba(255,255,255,0.3);
 }
-.detail-title { color: #0066cc; font-weight: 800; }
+
+.detail-title { font-size: 22px; color: #1d4ed8; font-weight: 800; }
+.detail-desc { font-size: 13px; margin: 15px 0; line-height: 1.5; color: #1a1a1a; }
+
+.action-group { display: flex; align-items: center; justify-content: space-between; }
 .btn-watch { color: white; border: none; padding: 10px 25px; border-radius: 20px; font-weight: 700; }
 .rating { width: 45px; height: 45px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
 
