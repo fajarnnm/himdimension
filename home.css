@@ -119,4 +119,3 @@ body {
 }
 .dots span { width: 6px; height: 6px; background: #cbd5e1; border-radius: 50%; }
 .dots span.active { background: #3b82f6; width: 15px; border-radius: 10px; } /* Biru */
-    
